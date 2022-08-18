@@ -1,0 +1,17 @@
+[common]
+use = {{ .Values.common.use }}
+# xsf rmq
+[rmq]
+queue_size = 10000
+consume_number = 40
+hosts = {{ .Values.rmq.hosts }}
+topic = {{ .Values.rmq.topic }}
+# 消息队列服务连接超时时间
+# millisecond
+timeout = 500
+
+[log]
+level = error
+path = "/log/server/calc.log"
+format = "json"
+console_print = false

@@ -1,0 +1,17 @@
+[common]
+use = rmq
+# xsf rmq
+[rmq]
+queue_size = 10000
+consume_number = 40
+hosts = [192.168.1.1:10800 192.168.1.2:10800]
+topic = mts_isol
+# 消息队列服务连接超时时间
+# millisecond
+timeout = 500
+
+[log]
+level = error
+path = "/log/server/calc.log"
+format = "json"
+console_print = false

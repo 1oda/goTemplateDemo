@@ -1,0 +1,6 @@
+common:
+  use: rmq
+# xsf rmq
+rmq:
+  hosts: ["192.168.1.1:10800","192.168.1.2:10800"]
+  topic: mts_isol
